@@ -147,10 +147,10 @@ export function BlurFadeDemo() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        // width: "1440px",
         height: "780px",
         paddingTop: "400px",
       }}
+      className="relative z-10"
     >
       <TextAnimate
         animation="blurInUp"

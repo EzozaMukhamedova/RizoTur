@@ -18,11 +18,8 @@ export default function Home({ posts }) {
 
       {/* pt-[70px] */}
       <GreenShopBanner />
-
       <TopRatedExperiences />
-
       <BlurFadeDemo />
-
       <Bulut />
       <div className="">
         <AccordionDemo />
@@ -30,9 +27,8 @@ export default function Home({ posts }) {
         {/* <Newsletter /> */}
       </div>
 
-
       <Samolyot />
-      
+
       <Footer />
       {/* <ProductCard /> */}
       {/* <div>
