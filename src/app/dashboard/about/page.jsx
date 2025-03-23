@@ -1,11 +1,14 @@
+"use client";
 import Bulut from "@/components/Bulut";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import Footer from "@/pages/footer/page";
 import Navbar from "@/pages/header/page";
+import { useRouter } from "next/navigation";
 
 import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Xizmat() {
+  const router = useRouter();
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   return (
     <>
@@ -14,6 +17,7 @@ export default function Xizmat() {
         <div className="mt-[-500px] z-5 ">
           <Bulut />
         </div>
+
         <div className="relative min-h-screen  from-[#DDE6F3] to-[#F7F4F8] p-6 mt-[-700px] z-1">
           <TextAnimate
             animation="blurInUp"
@@ -23,8 +27,15 @@ export default function Xizmat() {
           >
             Biz haqimizda
           </TextAnimate>
+          <div className="max-w-[880px] mx-auto ">
+            <button
+              className="bg-yellow-500 text-white px-4 py-2 mb-[-100px] rounded-md hover:bg-yellow-700 transition cursor-pointer"
+              onClick={() => router.push("/")}
+            >
+              ← Orqaga
+            </button>
+          </div>
           <section className=" from-[#f8f9fa] to-[#e6e9ec] py-16 px-6">
-            {/* 🏢 Xizmatlar */}
             <div className="max-w-3xl mx-auto bg-[#ffffff44] shadow-lg rounded-2xl p-8 text-center">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 ✈️ Rizo Tour Agency
@@ -81,7 +92,7 @@ export default function Xizmat() {
                   foydalanmoqchi bo‘lsangiz, biz bilan bog‘laning.
                 </p>
                 <a
-                  href="/contact"
+                  href="/dashboard/contact"
                   className="inline-block mt-4 bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-700 transition"
                 >
                   Aloqaga chiqish

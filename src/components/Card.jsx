@@ -156,7 +156,7 @@ export function BlurFadeDemo() {
         animation="blurInUp"
         by="character"
         duration={1}
-        className="text-[34px] mt-[80px] mb-[-50px] font-bold text-black tracking-wide text-center"
+        className="text-[34px] mt-[80px] mb-[-50px] font-bold text-[#135C65] tracking-wide text-center"
       >
         Yorqin Lahzalar
       </TextAnimate>

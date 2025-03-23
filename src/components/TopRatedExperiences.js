@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 import { FaStar } from "react-icons/fa";
 import { experiences } from "../data/experiences";
-
+import { TextAnimate } from "./magicui/text-animate";
 
 export default function TopRatedExperiences() {
   const router = useRouter();
@@ -19,9 +19,18 @@ export default function TopRatedExperiences() {
 
   return (
     <div className="max-w-7xl mx-auto py-12 text-center">
-      <h2 className="text-[34px] font-bold text-black tracking-wide text-center">
+      {/* <h2 className="text-[34px] font-bold text-[#135C65] tracking-wide text-center">
         Shunchaki orzu qilmang, u bilan yashang!
-      </h2>
+      </h2> */}
+
+      <TextAnimate
+        animation="blurInUp"
+        by="character"
+        duration={2}
+        className="text-[34px] font-extrabold text-[#135C65] tracking-wide text-center"
+      >
+        Shunchaki orzu qilmang, u bilan yashang!
+      </TextAnimate>
 
       <Swiper
         slidesPerView={3}

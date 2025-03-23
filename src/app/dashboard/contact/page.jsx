@@ -8,6 +8,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import Bulut from "@/components/Bulut";
+import { useRouter } from "next/navigation";
 
 export default function Aloqa() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ export default function Aloqa() {
     email: "",
     message: "",
   });
+  const router = useRouter();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -38,6 +40,14 @@ export default function Aloqa() {
     <>
       <div className="w-[1440px] h-[80px] m-auto">
         <Navbar />
+        <div className="max-w-[880px] mx-auto mt-4">
+          <button
+            className="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-700 transition cursor-pointer"
+            onClick={() => router.push("/")}
+          >
+            ← Orqaga
+          </button>
+        </div>
         <ToastContainer />
         <div className="min-h-screen flex flex-col items-center  p-6">
           <TextAnimate
@@ -48,10 +58,10 @@ export default function Aloqa() {
           >
             Biz bilan bog‘laning
           </TextAnimate>
-          <div className="mt-[-500px] z-5 ">
+          {/* <div className="mt-[-500px] z-5 ">
             <Bulut />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl text-center mt-[-680px]">
+          </div> */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl text-center ">
             <div className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
               <Phone size={32} className="text-yellow-600" />
               <p className="text-lg font-semibold mt-3">Telefon</p>

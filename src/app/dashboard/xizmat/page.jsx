@@ -1,11 +1,14 @@
+"use client";
 import Bulut from "@/components/Bulut";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import Footer from "@/pages/footer/page";
+import { useRouter } from "next/navigation";
 import Navbar from "@/pages/header/page";
 
 import { Briefcase, Globe, Hotel, Plane, ShieldCheck, Car } from "lucide-react";
 
 export default function Xizmat() {
+  const router = useRouter();
   const services = [
     {
       title: "Tur dasturlari",
@@ -53,6 +56,15 @@ export default function Xizmat() {
           <Bulut />
 
           <div className="min-h-screen from-[#DDE6F3] to-[#F7F4F8] pt-6 mt-[-1150px]">
+            <div className="max-w-[880px] mx-auto mt-4">
+              <button
+                className="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-700 transition cursor-pointer"
+                onClick={() => router.push("/")}
+              >
+                ← Orqaga
+              </button>
+            </div>
+
             <TextAnimate
               animation="blurInUp"
               by="character"
@@ -62,7 +74,6 @@ export default function Xizmat() {
               Bizning Xizmatlar
             </TextAnimate>
 
-            {/* 🔹 Xizmatlar qismi */}
             <section className=" py-16 px-6">
               <div className="text-center max-w-2xl mx-auto">
                 <p className="text-gray-600 mt-[-50px]">
@@ -73,7 +84,7 @@ export default function Xizmat() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
                 {services.map((service, index) => {
-                  const Icon = service.icon; // Ikonani to‘g‘ri chaqirish
+                  const Icon = service.icon;
                   return (
                     <div
                       key={index}

@@ -25,7 +25,7 @@ export function AccordionDemo() {
             animation="blurInUp"
             by="character"
             duration={1}
-            className="text-[34px] font-bold text-black tracking-wide text-center"
+            className="text-[34px] font-bold text-[#135C65] tracking-wide text-center"
           >
             Top 3 savollar
           </TextAnimate>
