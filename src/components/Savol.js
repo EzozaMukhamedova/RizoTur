@@ -51,7 +51,7 @@ export function AccordionDemo() {
             </AccordionTrigger>
             <AccordionContent className="text-[16px]">
               ✔️ Shartnomaga bog‘liq, ba’zi holatlarda to‘liq qaytariladi.
-              Ba'zan esa qisman qaytariladi.
+              Ba&apos;zan esa qisman qaytariladi.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
